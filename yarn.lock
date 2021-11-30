@@ -413,7 +413,7 @@ graceful-fs@^4.1.2:
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.8.tgz#e412b8d33f5e006593cbd3cee6df9f2cebbe802a"
   integrity sha512-qkIilPUYcNhJpd33n0GBXTB1MMPp14TxEsEs0pTrsSVucApsYzW5V+Q8Qxhik6KU3evy+qkAAowTByymK0avdg==
 
-grammy@^1.4.0:
+grammy@^1.4.2:
   version "1.4.2"
   resolved "https://registry.yarnpkg.com/grammy/-/grammy-1.4.2.tgz#c7f3e2f9a37cdd13ee7f773a9b188c58ea120899"
   integrity sha512-jodN7lUIgi31N3sIcfbbr8XZEs7Ajj/ZNpqwNkmZ1/U0ZYr/a/eg0KVVUU2Fotw1lBFXWlnucd/G81pR6IHSsw==
