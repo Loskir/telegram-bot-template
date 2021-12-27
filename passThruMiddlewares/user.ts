@@ -10,9 +10,7 @@ composer.on([
   'callback_query',
   'my_chat_member',
 ]).filter(
-  (ctx) => {
-    return ctx.chat?.type === 'private'
-  },
+  (ctx) => ctx.chat?.type === 'private',
   async (ctx, next) => {
     const from = ctx.from ?? ctx.myChatMember?.from
     let params: Partial<User> = {

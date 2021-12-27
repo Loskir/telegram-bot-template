@@ -1,5 +1,6 @@
 import mongoose from 'mongoose'
+import {config} from './config'
 
 export const connectMongoose = () => {
-  return mongoose.connect(process.env.MONGO_URL || '')
+  return mongoose.connect(config.mongo)
 }

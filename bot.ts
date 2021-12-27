@@ -1,15 +1,17 @@
 import {Bot} from 'grammy'
+
+import {config} from './core/config'
 import {CustomContext} from './types/context'
 
 import user from './passThruMiddlewares/user'
 
+import {mainComposer} from './middlewares/main'
+
 export function getBot() {
-  const bot = new Bot<CustomContext>(process.env.BOT_TOKEN || '')
+  const bot = new Bot<CustomContext>(config.token)
   bot.use(user)
-  bot.command('start', (ctx) => {
-    console.log(ctx.user)
-    return ctx.reply('hi!')
-  })
+
+  bot.use(mainComposer)
 
   bot.catch(console.error)
 
