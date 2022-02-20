@@ -6,10 +6,10 @@
   "scripts": {
     "distribute": "yarn build-ts && yarn run-dist",
     "run-dist": "node dist/index.js",
-    "develop": "concurrently -k -i -p \"[{name}]\" -n \"Node,TypeScript\" -c \"yellow.bold,cyan.bold\" \"yarn watch-js\" \"yarn watch-ts\"",
+    "develop": "concurrently -r -k -i \"yarn watch-js\" \"yarn watch-ts\"",
     "build-ts": "yarn tsc",
     "watch-ts": "yarn tsc -w",
-    "watch-js": "nodemon dist/index.js"
+    "watch-js": "nodemon dist/index.js --config nodemon.json"
   },
   "dependencies": {
     "@satont/grammy-mongodb-storage": "^1.0.1",
